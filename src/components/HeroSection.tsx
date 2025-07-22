@@ -74,14 +74,25 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Content - Profile Image Placeholder */}
+          {/* Right Content - Profile Image */}
           <div className="flex justify-center animate-slide-in-right">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-neon-purple/20 flex items-center justify-center glow animate-glow-pulse">
-                <div className="w-72 h-72 rounded-full bg-muted/20 flex items-center justify-center">
+              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-neon-purple/20 p-2 glow animate-glow-pulse">
+                <img
+                  src="https://i.postimg.cc/76gKxXNW/tuliiiiiii.jpg"
+                  alt="Debopriya Debnath - Frontend Developer"
+                  className="w-full h-full rounded-full object-cover border-4 border-primary/30 shadow-2xl hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback content - hidden by default, shown if image fails to load */}
+                <div className="w-full h-full rounded-full bg-muted/20 items-center justify-center hidden">
                   <p className="text-center text-muted-foreground">
                     Profile Photo<br />
-                    <span className="text-sm">Coming Soon</span>
+                    <span className="text-sm">Loading...</span>
                   </p>
                 </div>
               </div>
