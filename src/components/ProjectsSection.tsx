@@ -2,13 +2,16 @@ import { ExternalLink, Github } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import ecoLocalImage from '@/assets/ecolocal-project.jpg';
+import airbnbImage from '@/assets/airbnb-project.jpg';
+import zentryImage from '@/assets/zentry-project.jpg';
 
 const ProjectsSection = () => {
   const projects = [
     {
       title: "EcoLocal – Web3-Powered FinTech E-commerce",
       description: "A decentralized shopping platform connecting users with local vendors using blockchain technology and Firebase for seamless transactions.",
-      image: "/api/placeholder/600/300",
+      image: ecoLocalImage,
       technologies: ["React", "Web3", "Firebase", "Blockchain", "Node.js"],
       liveUrl: "#",
       githubUrl: "#",
@@ -17,7 +20,7 @@ const ProjectsSection = () => {
     {
       title: "Airbnb Clone Project",
       description: "A comprehensive full-stack replica featuring booking systems, property listings, and user authentication built with modern technologies.",
-      image: "/api/placeholder/600/300",
+      image: airbnbImage,
       technologies: ["Next.js", "MongoDB", "TypeScript", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
@@ -26,7 +29,7 @@ const ProjectsSection = () => {
     {
       title: "Zentry – AI-Driven Smart Expense Tracker",
       description: "A futuristic mobile application for expense management with AI budget advisor, blockchain transparency, and collaborative group tracking capabilities.",
-      image: "/api/placeholder/600/300",
+      image: zentryImage,
       technologies: ["React Native", "Expo", "Node.js", "AI/Gemini API", "Blockchain", "MongoDB"],
       liveUrl: "#",
       githubUrl: "https://github.com/debonir-projects/Zentry",
@@ -53,9 +56,13 @@ const ProjectsSection = () => {
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary/10 to-neon-purple/10 flex items-center justify-center">
-                <p className="text-muted-foreground">Project Screenshot</p>
+              {/* Project Image */}
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
               <CardHeader>
