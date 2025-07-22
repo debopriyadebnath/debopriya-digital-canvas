@@ -24,21 +24,12 @@ const ProjectsSection = () => {
       featured: true
     },
     {
-      title: "AI-Powered Chat Application",
-      description: "Interactive chat application with NLP capabilities, featuring real-time messaging and intelligent responses.",
+      title: "Zentry – AI-Driven Smart Expense Tracker",
+      description: "A futuristic mobile application for expense management with AI budget advisor, blockchain transparency, and collaborative group tracking capabilities.",
       image: "/api/placeholder/600/300",
-      technologies: ["React", "OpenAI API", "Socket.io", "Python"],
+      technologies: ["React Native", "Expo", "Node.js", "AI/Gemini API", "Blockchain", "MongoDB"],
       liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Portfolio Dashboard",
-      description: "A dynamic dashboard for managing personal projects and showcasing development work with analytics integration.",
-      image: "/api/placeholder/600/300",
-      technologies: ["React", "Chart.js", "Firebase", "Material-UI"],
-      liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/debonir-projects/Zentry",
       featured: false
     }
   ];
